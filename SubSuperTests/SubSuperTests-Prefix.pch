@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'SubSuperTests' target in the 'SubSuperTests' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
