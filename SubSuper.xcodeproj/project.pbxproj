@@ -17,6 +17,7 @@
 		0DE067E41776578000250444 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE067BF177656E700250444 /* Cocoa.framework */; };
 		0DE067EA1776578000250444 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DE067E81776578000250444 /* InfoPlist.strings */; };
 		0DE067ED1776578000250444 /* SubSuperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE067EC1776578000250444 /* SubSuperTests.m */; };
+		83694079D1D04CD58EE61A76 /* libPods-SubSuperTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CBB4DD3C3F4FFC960D9A9C /* libPods-SubSuperTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		0DE067EB1776578000250444 /* SubSuperTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubSuperTests.h; sourceTree = "<group>"; };
 		0DE067EC1776578000250444 /* SubSuperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubSuperTests.m; sourceTree = "<group>"; };
 		0DE067EE1776578000250444 /* SubSuperTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SubSuperTests-Prefix.pch"; sourceTree = "<group>"; };
+		69CBB4DD3C3F4FFC960D9A9C /* libPods-SubSuperTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SubSuperTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84E78295AA19444694A4AF7F /* Pods-SubSuperTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubSuperTests.xcconfig"; path = "Pods/Pods-SubSuperTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,7 @@
 			files = (
 				0DE067E31776578000250444 /* SenTestingKit.framework in Frameworks */,
 				0DE067E41776578000250444 /* Cocoa.framework in Frameworks */,
+				83694079D1D04CD58EE61A76 /* libPods-SubSuperTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +74,7 @@
 				0DE067E51776578000250444 /* SubSuperTests */,
 				0DE067BE177656E700250444 /* Frameworks */,
 				0DE067BD177656E700250444 /* Products */,
+				84E78295AA19444694A4AF7F /* Pods-SubSuperTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +93,7 @@
 				0DE067BF177656E700250444 /* Cocoa.framework */,
 				0DE067E21776578000250444 /* SenTestingKit.framework */,
 				0DE067C1177656E700250444 /* Other Frameworks */,
+				69CBB4DD3C3F4FFC960D9A9C /* libPods-SubSuperTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,10 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DE067EF1776578000250444 /* Build configuration list for PBXNativeTarget "SubSuperTests" */;
 			buildPhases = (
+				AA7F194173BD4A9BB2CF8865 /* Check Pods Manifest.lock */,
 				0DE067DC1776578000250444 /* Sources */,
 				0DE067DD1776578000250444 /* Frameworks */,
 				0DE067DE1776578000250444 /* Resources */,
 				0DE067DF1776578000250444 /* ShellScript */,
+				26F89215076F40529BC267E4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,6 +252,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		26F89215076F40529BC267E4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-SubSuperTests-resources.sh\"\n";
+		};
+		AA7F194173BD4A9BB2CF8865 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -388,26 +424,32 @@
 		};
 		0DE067F01776578000250444 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84E78295AA19444694A4AF7F /* Pods-SubSuperTests.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SubSuper.app/Contents/MacOS/SubSuper";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SubSuperTests/SubSuperTests-Prefix.pch";
 				INFOPLIST_FILE = "SubSuperTests/SubSuperTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
 		0DE067F11776578000250444 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84E78295AA19444694A4AF7F /* Pods-SubSuperTests.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SubSuper.app/Contents/MacOS/SubSuper";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SubSuperTests/SubSuperTests-Prefix.pch";
 				INFOPLIST_FILE = "SubSuperTests/SubSuperTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -431,6 +473,7 @@
 				0DE067DB177656E700250444 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DE067EF1776578000250444 /* Build configuration list for PBXNativeTarget "SubSuperTests" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +482,7 @@
 				0DE067F11776578000250444 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
