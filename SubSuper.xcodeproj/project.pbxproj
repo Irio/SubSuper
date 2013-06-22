@@ -16,7 +16,6 @@
 		0DE067E31776578000250444 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE067E21776578000250444 /* SenTestingKit.framework */; };
 		0DE067E41776578000250444 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE067BF177656E700250444 /* Cocoa.framework */; };
 		0DE067EA1776578000250444 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DE067E81776578000250444 /* InfoPlist.strings */; };
-		0DE067ED1776578000250444 /* SubSuperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE067EC1776578000250444 /* SubSuperTests.m */; };
 		83694079D1D04CD58EE61A76 /* libPods-SubSuperTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CBB4DD3C3F4FFC960D9A9C /* libPods-SubSuperTests.a */; };
 /* End PBXBuildFile section */
 
@@ -38,8 +37,6 @@
 		0DE067E21776578000250444 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		0DE067E71776578000250444 /* SubSuperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SubSuperTests-Info.plist"; sourceTree = "<group>"; };
 		0DE067E91776578000250444 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0DE067EB1776578000250444 /* SubSuperTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubSuperTests.h; sourceTree = "<group>"; };
-		0DE067EC1776578000250444 /* SubSuperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubSuperTests.m; sourceTree = "<group>"; };
 		0DE067EE1776578000250444 /* SubSuperTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SubSuperTests-Prefix.pch"; sourceTree = "<group>"; };
 		69CBB4DD3C3F4FFC960D9A9C /* libPods-SubSuperTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SubSuperTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E78295AA19444694A4AF7F /* Pods-SubSuperTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubSuperTests.xcconfig"; path = "Pods/Pods-SubSuperTests.xcconfig"; sourceTree = SOURCE_ROOT; };
@@ -134,8 +131,6 @@
 		0DE067E51776578000250444 /* SubSuperTests */ = {
 			isa = PBXGroup;
 			children = (
-				0DE067EB1776578000250444 /* SubSuperTests.h */,
-				0DE067EC1776578000250444 /* SubSuperTests.m */,
 				0DE067E61776578000250444 /* Supporting Files */,
 			);
 			path = SubSuperTests;
@@ -297,7 +292,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DE067ED1776578000250444 /* SubSuperTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
