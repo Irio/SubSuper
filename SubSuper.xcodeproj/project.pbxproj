@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DD9AB4B177664F000D0C360 /* SubtitleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9AB4A177664F000D0C360 /* SubtitleSpec.m */; };
+		0DD9AB4E1776675C00D0C360 /* SubtitleFileSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9AB4D1776675C00D0C360 /* SubtitleFileSpec.m */; };
+		0DD9AB5117766C4900D0C360 /* SubtitleFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9AB5017766C4900D0C360 /* SubtitleFile.m */; };
+		0DD9AB5417766DF300D0C360 /* subtitle_file_fixture.srt in Resources */ = {isa = PBXBuildFile; fileRef = 0DD9AB5317766DF300D0C360 /* subtitle_file_fixture.srt */; };
 		0DE067C0177656E700250444 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE067BF177656E700250444 /* Cocoa.framework */; };
 		0DE067CA177656E700250444 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DE067C8177656E700250444 /* InfoPlist.strings */; };
 		0DE067CC177656E700250444 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE067CB177656E700250444 /* main.m */; };
@@ -20,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DD9AB4A177664F000D0C360 /* SubtitleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitleSpec.m; sourceTree = "<group>"; };
+		0DD9AB4D1776675C00D0C360 /* SubtitleFileSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitleFileSpec.m; sourceTree = "<group>"; };
+		0DD9AB4F17766C4900D0C360 /* SubtitleFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubtitleFile.h; sourceTree = "<group>"; };
+		0DD9AB5017766C4900D0C360 /* SubtitleFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitleFile.m; sourceTree = "<group>"; };
+		0DD9AB5317766DF300D0C360 /* subtitle_file_fixture.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = subtitle_file_fixture.srt; sourceTree = "<group>"; };
 		0DE067BC177656E700250444 /* SubSuper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubSuper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE067BF177656E700250444 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0DE067C2177656E700250444 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -64,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DD9AB5217766DBF00D0C360 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				0DD9AB5317766DF300D0C360 /* subtitle_file_fixture.srt */,
+			);
+			name = Fixtures;
+			sourceTree = "<group>";
+		};
 		0DE067B3177656E600250444 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +129,8 @@
 				0DE067D2177656E700250444 /* AppDelegate.m */,
 				0DE067D4177656E700250444 /* MainMenu.xib */,
 				0DE067C6177656E700250444 /* Supporting Files */,
+				0DD9AB4F17766C4900D0C360 /* SubtitleFile.h */,
+				0DD9AB5017766C4900D0C360 /* SubtitleFile.m */,
 			);
 			path = SubSuper;
 			sourceTree = "<group>";
@@ -131,6 +150,9 @@
 		0DE067E51776578000250444 /* SubSuperTests */ = {
 			isa = PBXGroup;
 			children = (
+				0DD9AB5217766DBF00D0C360 /* Fixtures */,
+				0DD9AB4D1776675C00D0C360 /* SubtitleFileSpec.m */,
+				0DD9AB4A177664F000D0C360 /* SubtitleSpec.m */,
 				0DE067E61776578000250444 /* Supporting Files */,
 			);
 			path = SubSuperTests;
@@ -229,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DE067EA1776578000250444 /* InfoPlist.strings in Resources */,
+				0DD9AB5417766DF300D0C360 /* subtitle_file_fixture.srt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +308,7 @@
 			files = (
 				0DE067CC177656E700250444 /* main.m in Sources */,
 				0DE067D3177656E700250444 /* AppDelegate.m in Sources */,
+				0DD9AB5117766C4900D0C360 /* SubtitleFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +316,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DD9AB4B177664F000D0C360 /* SubtitleSpec.m in Sources */,
+				0DD9AB4E1776675C00D0C360 /* SubtitleFileSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
