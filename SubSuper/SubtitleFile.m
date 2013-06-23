@@ -18,8 +18,16 @@
     NSArray *fileLines = [fileContent componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     
     SubtitleFile *subtitleFile = [[SubtitleFile alloc] init];
+    Subtitle     *subtitle;
+    subtitleFile.subtitles = [[NSMutableArray alloc] init];
     for (NSString *subtitleString in fileLines) {
+        FileLineParser *parsedLine = [FileLineParser initWithLine:subtitleString];
         
+        if (parsedLine.type == SubtitlePositionLine) {
+            subtitle = [[Subtitle alloc] init];
+            [subtitleFile.subtitles addObject:subtitle];
+        }
+            
     }
     
     return subtitleFile;

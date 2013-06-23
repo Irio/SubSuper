@@ -17,7 +17,7 @@ context(@"parsing", ^{
         NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"subtitle_file_fixture"
                                                          ofType:@"srt"];
         SubtitleFile *subject = [SubtitleFile parseFrom:path];
-        [[[subject subtitles] should] haveCountOf:2];
+        [[[subject should] have:2] subtitles];
     });
     
 });

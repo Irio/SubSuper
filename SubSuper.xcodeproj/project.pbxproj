@@ -11,6 +11,9 @@
 		0DD9AB4E1776675C00D0C360 /* SubtitleFileSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9AB4D1776675C00D0C360 /* SubtitleFileSpec.m */; };
 		0DD9AB5117766C4900D0C360 /* SubtitleFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9AB5017766C4900D0C360 /* SubtitleFile.m */; };
 		0DD9AB5417766DF300D0C360 /* subtitle_file_fixture.srt in Resources */ = {isa = PBXBuildFile; fileRef = 0DD9AB5317766DF300D0C360 /* subtitle_file_fixture.srt */; };
+		0DD9AB5717767A6400D0C360 /* FileLineParserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9AB5617767A6400D0C360 /* FileLineParserSpec.m */; };
+		0DD9AB5A17767B6000D0C360 /* FileLineParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9AB5917767B6000D0C360 /* FileLineParser.m */; };
+		0DD9AB5D1776924F00D0C360 /* Subtitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9AB5C1776924F00D0C360 /* Subtitle.m */; };
 		0DE067C0177656E700250444 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE067BF177656E700250444 /* Cocoa.framework */; };
 		0DE067CA177656E700250444 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DE067C8177656E700250444 /* InfoPlist.strings */; };
 		0DE067CC177656E700250444 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE067CB177656E700250444 /* main.m */; };
@@ -29,6 +32,11 @@
 		0DD9AB4F17766C4900D0C360 /* SubtitleFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubtitleFile.h; sourceTree = "<group>"; };
 		0DD9AB5017766C4900D0C360 /* SubtitleFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitleFile.m; sourceTree = "<group>"; };
 		0DD9AB5317766DF300D0C360 /* subtitle_file_fixture.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = subtitle_file_fixture.srt; sourceTree = "<group>"; };
+		0DD9AB5617767A6400D0C360 /* FileLineParserSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileLineParserSpec.m; path = SubSuperTests/FileLineParserSpec.m; sourceTree = SOURCE_ROOT; };
+		0DD9AB5817767B6000D0C360 /* FileLineParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileLineParser.h; sourceTree = "<group>"; };
+		0DD9AB5917767B6000D0C360 /* FileLineParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileLineParser.m; sourceTree = "<group>"; };
+		0DD9AB5B1776924F00D0C360 /* Subtitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subtitle.h; sourceTree = "<group>"; };
+		0DD9AB5C1776924F00D0C360 /* Subtitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subtitle.m; sourceTree = "<group>"; };
 		0DE067BC177656E700250444 /* SubSuper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubSuper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE067BF177656E700250444 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0DE067C2177656E700250444 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -125,12 +133,16 @@
 		0DE067C5177656E700250444 /* SubSuper */ = {
 			isa = PBXGroup;
 			children = (
+				0DE067C6177656E700250444 /* Supporting Files */,
 				0DE067D1177656E700250444 /* AppDelegate.h */,
 				0DE067D2177656E700250444 /* AppDelegate.m */,
 				0DE067D4177656E700250444 /* MainMenu.xib */,
-				0DE067C6177656E700250444 /* Supporting Files */,
+				0DD9AB5817767B6000D0C360 /* FileLineParser.h */,
+				0DD9AB5917767B6000D0C360 /* FileLineParser.m */,
 				0DD9AB4F17766C4900D0C360 /* SubtitleFile.h */,
 				0DD9AB5017766C4900D0C360 /* SubtitleFile.m */,
+				0DD9AB5B1776924F00D0C360 /* Subtitle.h */,
+				0DD9AB5C1776924F00D0C360 /* Subtitle.m */,
 			);
 			path = SubSuper;
 			sourceTree = "<group>";
@@ -150,10 +162,11 @@
 		0DE067E51776578000250444 /* SubSuperTests */ = {
 			isa = PBXGroup;
 			children = (
+				0DE067E61776578000250444 /* Supporting Files */,
 				0DD9AB5217766DBF00D0C360 /* Fixtures */,
+				0DD9AB5617767A6400D0C360 /* FileLineParserSpec.m */,
 				0DD9AB4D1776675C00D0C360 /* SubtitleFileSpec.m */,
 				0DD9AB4A177664F000D0C360 /* SubtitleSpec.m */,
-				0DE067E61776578000250444 /* Supporting Files */,
 			);
 			path = SubSuperTests;
 			sourceTree = "<group>";
@@ -309,6 +322,8 @@
 				0DE067CC177656E700250444 /* main.m in Sources */,
 				0DE067D3177656E700250444 /* AppDelegate.m in Sources */,
 				0DD9AB5117766C4900D0C360 /* SubtitleFile.m in Sources */,
+				0DD9AB5A17767B6000D0C360 /* FileLineParser.m in Sources */,
+				0DD9AB5D1776924F00D0C360 /* Subtitle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +333,7 @@
 			files = (
 				0DD9AB4B177664F000D0C360 /* SubtitleSpec.m in Sources */,
 				0DD9AB4E1776675C00D0C360 /* SubtitleFileSpec.m in Sources */,
+				0DD9AB5717767A6400D0C360 /* FileLineParserSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FileLineParser.h"
+#import "Subtitle.h"
 
 @interface SubtitleFile : NSObject
 
 + (SubtitleFile *)parseFrom:(NSString *)filePath;
 
-@property NSArray *subtitles;
+@property NSMutableArray *subtitles;
 
 @end
