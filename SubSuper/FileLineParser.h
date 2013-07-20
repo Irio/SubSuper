@@ -23,4 +23,9 @@ typedef NS_ENUM(NSUInteger, LineType) {
 @property NSString *line;
 @property LineType type;
 
+// Subtitle's attributes
+@property NSString  *block;
+@property NSInteger blockDuration;
+@property NSInteger timeCode;
+
 @end

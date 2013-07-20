@@ -10,4 +10,11 @@
 
 @implementation Subtitle
 
+- (id)init
+{
+    id obj = [super init];
+    [(Subtitle *)obj setBlock:[[NSMutableString alloc] init]];
+    return obj;
+}
+
 @end

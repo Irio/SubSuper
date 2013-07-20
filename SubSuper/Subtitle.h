@@ -10,4 +10,8 @@
 
 @interface Subtitle : NSObject
 
+@property NSMutableString *block;
+@property NSInteger       blockDuration;
+@property NSInteger       timeCode;
+
 @end

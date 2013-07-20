@@ -20,6 +20,7 @@
     SubtitleFile *subtitleFile = [[SubtitleFile alloc] init];
     Subtitle     *subtitle;
     subtitleFile.subtitles = [[NSMutableArray alloc] init];
+    
     for (NSString *subtitleString in fileLines) {
         FileLineParser *parsedLine = [FileLineParser initWithLine:subtitleString];
         
@@ -27,7 +28,18 @@
             subtitle = [[Subtitle alloc] init];
             [subtitleFile.subtitles addObject:subtitle];
         }
+        
+        if (parsedLine.type == TimeLine) {
+            subtitle.blockDuration = parsedLine.blockDuration;
+            subtitle.timeCode      = parsedLine.timeCode;
+        }
+        
+        if (parsedLine.type == TextLine) {
+            if (![subtitle.block isEqualToString:@""])
+                [subtitle.block appendString:@"\n"];
             
+            [subtitle.block appendString:parsedLine.block];
+        }
     }
     
     return subtitleFile;
