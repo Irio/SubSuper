@@ -25,6 +25,7 @@ describe(@"+ loadFrom:", ^{
                                                                           ofType:@"srt"];
         SubtitleFile *subtitleFile = [SubtitleFile loadFrom:path];
         Subtitle *subject = [[subtitleFile subtitles] objectAtIndex:1];
+        
         [[[subject block] should] equal:@"Very good, Lieutenant."];
         [[theValue([subject timeCode]) should] equal:theValue(140476)];
         [[theValue([subject blockDuration]) should] equal:theValue(2025)];

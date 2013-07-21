@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SubRipFormat.h"
 
 @interface FileLineParser : NSObject
 

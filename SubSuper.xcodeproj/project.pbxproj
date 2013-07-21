@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D7AFF3A179C24910013575D /* SubRipFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7AFF39179C24910013575D /* SubRipFormat.m */; };
+		0D7AFF3D179C24D60013575D /* SubRipFormatSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7AFF3C179C24D60013575D /* SubRipFormatSpec.m */; };
 		0DD9AB4B177664F000D0C360 /* SubtitleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9AB4A177664F000D0C360 /* SubtitleSpec.m */; };
 		0DD9AB4E1776675C00D0C360 /* SubtitleFileSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9AB4D1776675C00D0C360 /* SubtitleFileSpec.m */; };
 		0DD9AB5117766C4900D0C360 /* SubtitleFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9AB5017766C4900D0C360 /* SubtitleFile.m */; };
@@ -27,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D7AFF38179C24910013575D /* SubRipFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubRipFormat.h; sourceTree = "<group>"; };
+		0D7AFF39179C24910013575D /* SubRipFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubRipFormat.m; sourceTree = "<group>"; };
+		0D7AFF3C179C24D60013575D /* SubRipFormatSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubRipFormatSpec.m; sourceTree = "<group>"; };
 		0DD9AB4A177664F000D0C360 /* SubtitleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitleSpec.m; sourceTree = "<group>"; };
 		0DD9AB4D1776675C00D0C360 /* SubtitleFileSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitleFileSpec.m; sourceTree = "<group>"; };
 		0DD9AB4F17766C4900D0C360 /* SubtitleFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubtitleFile.h; sourceTree = "<group>"; };
@@ -143,6 +148,8 @@
 				0DD9AB5017766C4900D0C360 /* SubtitleFile.m */,
 				0DD9AB5B1776924F00D0C360 /* Subtitle.h */,
 				0DD9AB5C1776924F00D0C360 /* Subtitle.m */,
+				0D7AFF38179C24910013575D /* SubRipFormat.h */,
+				0D7AFF39179C24910013575D /* SubRipFormat.m */,
 			);
 			path = SubSuper;
 			sourceTree = "<group>";
@@ -165,6 +172,7 @@
 				0DE067E61776578000250444 /* Supporting Files */,
 				0DD9AB5217766DBF00D0C360 /* Fixtures */,
 				0DD9AB5617767A6400D0C360 /* FileLineParserSpec.m */,
+				0D7AFF3C179C24D60013575D /* SubRipFormatSpec.m */,
 				0DD9AB4D1776675C00D0C360 /* SubtitleFileSpec.m */,
 				0DD9AB4A177664F000D0C360 /* SubtitleSpec.m */,
 			);
@@ -324,6 +332,7 @@
 				0DD9AB5117766C4900D0C360 /* SubtitleFile.m in Sources */,
 				0DD9AB5A17767B6000D0C360 /* FileLineParser.m in Sources */,
 				0DD9AB5D1776924F00D0C360 /* Subtitle.m in Sources */,
+				0D7AFF3A179C24910013575D /* SubRipFormat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +343,7 @@
 				0DD9AB4B177664F000D0C360 /* SubtitleSpec.m in Sources */,
 				0DD9AB4E1776675C00D0C360 /* SubtitleFileSpec.m in Sources */,
 				0DD9AB5717767A6400D0C360 /* FileLineParserSpec.m in Sources */,
+				0D7AFF3D179C24D60013575D /* SubRipFormatSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
