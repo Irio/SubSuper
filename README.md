@@ -12,4 +12,4 @@ With the use of [CocoaPods](http://cocoapods.org/), it is expected that you alwa
 open SubSuper.xcworkspace
 ```
 
-To any contribution, the test suite is your friend. The library used for unit testing is [Kiwi](https://github.com/allending/Kiwi). With the project opened, just hit `⌘U` and get the result from all the application's tests.
+To any contribution, the test suite is your friend. The library used for unit testing is [Kiwi](https://github.com/allending/Kiwi). With the project opened, just hit `⌘U` and get the result of all application's tests.
