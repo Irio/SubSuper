@@ -10,7 +10,14 @@
 
 @implementation SubtitleFile
 
-+ (SubtitleFile *)parseFrom:(NSString *)filePath
+- (id)initWithSubtitles:(NSMutableArray *)subtitles;
+{
+    id obj = [super init];
+    [(SubtitleFile *)obj setSubtitles:subtitles];
+    return obj;
+}
+
++ (SubtitleFile *)loadFrom:(NSString *)filePath
 {
     NSString *fileContent = [NSString stringWithContentsOfFile:filePath
                                                       encoding:NSUTF8StringEncoding
@@ -43,6 +50,21 @@
     }
     
     return subtitleFile;
+}
+
+- (void)saveTo:(NSString *)filePath
+{
+    [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
+    [[NSFileManager defaultManager] createFileAtPath:filePath contents:nil attributes:nil];
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:filePath];
+    
+    NSString *subtitleLine;
+    for (Subtitle *subtitle in self.subtitles) {
+        NSInteger position = [self.subtitles indexOfObject:subtitle];
+        subtitleLine = [NSString stringWithFormat:@"%@\n\n", [subtitle stringValueInPosition:position]];
+        [fileHandle writeData:[subtitleLine dataUsingEncoding:NSUTF8StringEncoding]];
+    }
+    [fileHandle closeFile];
 }
 
 @end

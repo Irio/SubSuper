@@ -12,7 +12,9 @@
 
 @interface SubtitleFile : NSObject
 
-+ (SubtitleFile *)parseFrom:(NSString *)filePath;
+- (id)initWithSubtitles:(NSMutableArray *)subtitles;
++ (SubtitleFile *)loadFrom:(NSString *)filePath;
+- (void)saveTo:(NSString *)filePath;
 
 @property NSMutableArray *subtitles;
 

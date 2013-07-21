@@ -14,4 +14,6 @@
 @property NSInteger       blockDuration;
 @property NSInteger       timeCode;
 
+- (NSString *)stringValueInPosition:(NSInteger)position;
+
 @end

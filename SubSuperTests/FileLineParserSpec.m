@@ -11,7 +11,7 @@
 
 SPEC_BEGIN(FileLineParserSpec)
 
-describe(@"initialization through initWithLine:", ^{
+describe(@"+ initWithLine:", ^{
     
     it(@"initializes the line attribute", ^{
         FileLineParser *subject = [FileLineParser initWithLine:@"1"];
@@ -21,7 +21,7 @@ describe(@"initialization through initWithLine:", ^{
 
 context(@"number of subtitle sequence line", ^{
   
-    describe(@"type method", ^{
+    describe(@"- type", ^{
         
         it(@"returns SubtitlePositionLine", ^{
             FileLineParser *subject = [FileLineParser initWithLine:@"1"];
@@ -34,7 +34,7 @@ context(@"number of subtitle sequence line", ^{
 
 context(@"text line", ^{
     
-    describe(@"type method", ^{
+    describe(@"- type", ^{
         
         it(@"returns TextLine", ^{
             FileLineParser *subject = [FileLineParser initWithLine:@"Senator, we're making"];
@@ -47,7 +47,7 @@ context(@"text line", ^{
 
 context(@"time line", ^{
     
-    describe(@"type method", ^{
+    describe(@"- type", ^{
         
         it(@"returns TimeLine", ^{
             FileLineParser *subject = [FileLineParser initWithLine:@"00:02:17,440 --> 00:02:20,375"];
@@ -60,7 +60,7 @@ context(@"time line", ^{
 
 context(@"subtitle separation line", ^{
     
-    describe(@"type method", ^{
+    describe(@"- type", ^{
         
         it(@"returns SubtitleSeparationLine", ^{
             FileLineParser *subject = [FileLineParser initWithLine:@""];
