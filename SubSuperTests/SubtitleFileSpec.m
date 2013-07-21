@@ -39,6 +39,32 @@ describe(@"+ loadFrom:", ^{
     });
 });
 
+describe(@"- setDelay:", ^{
+    
+    it(@"changes the value of subtitleFile's delay", ^{
+        Subtitle *subtitle = [[Subtitle alloc] init];
+        [[subtitle block] appendString:@"Lorem ipsum dolor sit amet, consectetur adipisicing elit"];
+        [subtitle setTimeCode:0];
+        [subtitle setBlockDuration:1300];
+        NSMutableArray *subtitles  = [[NSMutableArray alloc] initWithArray:@[subtitle]];
+        SubtitleFile *subtitleFile = [[SubtitleFile alloc] initWithSubtitles:subtitles];
+        [subtitleFile setDelay:42];
+        [[theValue(subtitleFile.delay) should] equal:theValue(42)];
+    });
+    
+    it(@"changes the value of subtitles' delay", ^{
+        Subtitle *subtitle = [[Subtitle alloc] init];
+        [[subtitle block] appendString:@"Lorem ipsum dolor sit amet, consectetur adipisicing elit"];
+        [subtitle setTimeCode:0];
+        [subtitle setBlockDuration:1300];
+        NSMutableArray *subtitles  = [[NSMutableArray alloc] initWithArray:@[subtitle]];
+        SubtitleFile *subtitleFile = [[SubtitleFile alloc] initWithSubtitles:subtitles];
+        [subtitleFile setDelay:42];
+        [[theValue(subtitle.delay) should] equal:theValue(42)];
+    });
+    
+});
+
 describe(@"- saveTo:", ^{
     
     it(@"creates a file", ^{
@@ -67,7 +93,7 @@ describe(@"- saveTo:", ^{
         
         [subtitleFile saveTo:@"/tmp/SubSuper.srt"];
         [[[NSString stringWithContentsOfFile:@"/tmp/SubSuper.srt"
-                                  encoding:NSUTF8StringEncoding
+                                    encoding:NSUTF8StringEncoding
                                        error:nil] should] startWithString:@"a_string_version_of_a_subtitle\n\na_string_version_of_a_subtitle"];
     });
 });

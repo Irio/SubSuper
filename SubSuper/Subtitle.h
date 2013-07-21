@@ -13,6 +13,7 @@
 @property NSMutableString *block;
 @property NSInteger       blockDuration;
 @property NSInteger       timeCode;
+@property NSInteger       delay;
 
 - (NSString *)stringValueInPosition:(NSInteger)position;
 

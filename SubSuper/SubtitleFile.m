@@ -67,4 +67,12 @@
     [fileHandle closeFile];
 }
 
+- (void)setDelay:(NSInteger)delay
+{
+    _delay = delay;
+    for (Subtitle *subtitle in self.subtitles) {
+        [subtitle setDelay:delay];
+    }
+}
+
 @end

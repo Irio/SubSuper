@@ -16,6 +16,7 @@
 + (SubtitleFile *)loadFrom:(NSString *)filePath;
 - (void)saveTo:(NSString *)filePath;
 
-@property NSMutableArray *subtitles;
+@property             NSMutableArray *subtitles;
+@property (nonatomic) NSInteger      delay;
 
 @end

@@ -20,17 +20,19 @@
 - (NSString *)stringValueInPosition:(NSInteger)position
 {
     NSString *startTime;
-    NSInteger hours, minutes, seconds, milliseconds, remainingTime;
-    hours         = self.timeCode / 3600000;
-    remainingTime = self.timeCode % 3600000;
+    NSInteger hours, minutes, seconds, milliseconds, initialTime, remainingTime;
+    initialTime   = self.timeCode + self.delay;
+    hours         = initialTime / 3600000;
+    remainingTime = initialTime % 3600000;
     minutes       = remainingTime / 60000;
     remainingTime = remainingTime % 60000;
     seconds       = remainingTime / 1000;
     milliseconds  = remainingTime % 1000;
     startTime = [NSString stringWithFormat:@"%02ld:%02ld:%02ld,%03ld", hours, minutes, seconds, milliseconds];
     
-    hours         = (self.timeCode + self.blockDuration) / 3600000;
-    remainingTime = (self.timeCode + self.blockDuration) % 3600000;
+    initialTime   = self.timeCode + self.blockDuration + self.delay;
+    hours         = initialTime / 3600000;
+    remainingTime = initialTime % 3600000;
     minutes       = remainingTime / 60000;
     remainingTime = remainingTime % 60000;
     seconds       = remainingTime / 1000;
