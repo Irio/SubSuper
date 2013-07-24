@@ -1,8 +1,10 @@
 # SubSuper
 
+![SubSuper screenshot](https://raw.github.com/Irio/SubSuper/master/screenshot.png)
+
 SubSuper is an under development Mac OS native subtitle synchronizer for human beings.
 
-Currently it's just a bunch of management classes and won't run a graphical interface if you compile it in your Xcode. It supports the most common [SubRip](http://www.matroska.org/technical/specs/subtitles/srt.html) format.
+It supports the most common [SubRip](http://www.matroska.org/technical/specs/subtitles/srt.html) format.
 
 ## Development
 
