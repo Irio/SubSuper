@@ -12,4 +12,6 @@
 
 @property (assign) IBOutlet NSWindow *window;
 
+@property NSString *selectedSubtitlePath;
+
 @end

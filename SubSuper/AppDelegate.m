@@ -12,7 +12,18 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    [self openFileDialog];
+}
+
+- (void)openFileDialog
+{
+    NSOpenPanel *filePanel = [NSOpenPanel openPanel];
+    [filePanel setAllowedFileTypes:@[@"srt"]];
+    [filePanel setCanChooseFiles:YES];
+    
+    if ([filePanel runModal] == NSFileHandlingPanelOKButton) {
+        self.selectedSubtitlePath = [[[filePanel URLs] objectAtIndex:0] path];
+    };
 }
 
 @end
