@@ -12,7 +12,7 @@
 
 + (NSInteger)parseTime:(NSString *)timeAsString
 {
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\A(\\d{2}):(\\d{2}):(\\d{2}),(\\d{3})\\z"
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\A((?:\\+*)(?:\\-*))(\\d{2}):(\\d{2}):(\\d{2}),(\\d{3})\\z"
                                                                            options:0
                                                                              error:nil];
     NSArray *matches = [regex matchesInString:timeAsString
@@ -21,12 +21,12 @@
     NSInteger timeInMS;
     if ([matches count]) {
         NSTextCheckingResult *result = matches[0];
-        timeInMS  = [[timeAsString substringWithRange:[result rangeAtIndex:4]] integerValue];           // milliseconds
-        timeInMS += [[timeAsString substringWithRange:[result rangeAtIndex:3]] integerValue] * 1000;    // seconds
-        timeInMS += [[timeAsString substringWithRange:[result rangeAtIndex:2]] integerValue] * 60000;   // minutes
-        timeInMS += [[timeAsString substringWithRange:[result rangeAtIndex:1]] integerValue] * 3600000; // hours
+        timeInMS  = [[timeAsString substringWithRange:[result rangeAtIndex:5]] integerValue];           // milliseconds
+        timeInMS += [[timeAsString substringWithRange:[result rangeAtIndex:4]] integerValue] * 1000;    // seconds
+        timeInMS += [[timeAsString substringWithRange:[result rangeAtIndex:3]] integerValue] * 60000;   // minutes
+        timeInMS += [[timeAsString substringWithRange:[result rangeAtIndex:2]] integerValue] * 3600000; // hours
         
-        return timeInMS;
+        return ([[timeAsString substringWithRange:[result rangeAtIndex:1]] isEqualToString:@"-"] ? -timeInMS : timeInMS);
     } else {
         return 0;
     }

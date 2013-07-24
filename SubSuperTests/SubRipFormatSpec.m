@@ -17,6 +17,14 @@ describe(@"+ parseTime:", ^{
         [[theValue([SubRipFormat parseTime:@"01:02:03,004"]) should] equal:theValue(3723004)];
     });
     
+    it(@"accepts an optional + sign at start of the string", ^{
+        [[theValue([SubRipFormat parseTime:@"+01:02:03,004"]) should] equal:theValue(3723004)];
+    });
+    
+    it(@"accepts an optional - sign at start of the string", ^{
+        [[theValue([SubRipFormat parseTime:@"-01:02:03,004"]) should] equal:theValue(-3723004)];
+    });
+    
 });
 
 describe(@"+ parseTimeLine:", ^{
