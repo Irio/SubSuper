@@ -60,7 +60,7 @@
     
     NSString *subtitleLine;
     for (Subtitle *subtitle in self.subtitles) {
-        NSInteger position = [self.subtitles indexOfObject:subtitle];
+        NSInteger position = [self.subtitles indexOfObject:subtitle] + 1;
         subtitleLine = [NSString stringWithFormat:@"%@\n\n", [subtitle stringValueInPosition:position]];
         [fileHandle writeData:[subtitleLine dataUsingEncoding:NSUTF8StringEncoding]];
     }
